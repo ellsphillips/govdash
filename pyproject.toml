@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "govdash"
+version = "0.1.0"
+description = "Gov styled components for Dash"
+authors = ["ellsphillips <elliott.phillips.dev@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/ellsphillips/govdash"
+repository = "https://github.com/ellsphillips/govdash"
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dash = "^2.6.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.0.0"
+pre-commit = "^2.20.0"
+flake8 = "^5.0.4"
+mypy = "^0.982"
+isort = "^5.10.1"
+black = { version = "^22.10.0", allow-prereleases = true }
+
+[tool.pytest.ini_options]
+addopts = "--cov=govdash"
+testpaths = ["tests"]
+
+[tool.mypy]
+mypy_path = "govdash"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+[tool.setuptools.package-data]
+govdash = "py.typed"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
