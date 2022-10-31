@@ -8,6 +8,7 @@ license = "MIT"
 homepage = "https://github.com/ellsphillips/govdash"
 repository = "https://github.com/ellsphillips/govdash"
 include = ["LICENSE"]
+packages = [{ include = "govdash" }]
 
 [tool.poetry.dependencies]
 python = "^3.8"
