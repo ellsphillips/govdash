@@ -74,6 +74,12 @@ exclude = '''
 )
 '''
 
+[tool.pyright]
+reportGeneralTypeIssues = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+reportUntypedFunctionDecorator = false
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
