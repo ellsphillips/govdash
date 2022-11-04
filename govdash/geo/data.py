@@ -1,11 +1,11 @@
-NATIONS = [
+NATIONS: list[str] = [
     "England",
     "Scotland",
     "Wales",
     "Northern Ireland",
 ]
 
-REGIONS = [
+REGIONS: list[str] = [
     "North East",
     "North West",
     "Yorkshire and the Humber",
@@ -20,7 +20,7 @@ REGIONS = [
     "Northern Ireland",
 ]
 
-LOCAL_AUTHORITIES = [
+LOCAL_AUTHORITY_DISTRICTS: list[str] = [
     "Adur",
     "Allerdale",
     "Amber Valley",
@@ -331,3 +331,11 @@ LOCAL_AUTHORITIES = [
     "Wyre Forest",
     "York",
 ]
+
+LOWER_TIER_LOCAL_AUTHORITIES: list[str] = []
+
+UPPER_TIER_LOCAL_AUTHORITIES: list[str] = []
+
+MIDDLE_SUPER_OUTPUT_AREAS: list[str] = []
+
+LOWER_SUPER_OUTPUT_AREAS: list[str] = []
