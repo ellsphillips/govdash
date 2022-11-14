@@ -18,6 +18,13 @@ def rgb_to_hex(rgb_value: RGBValue) -> str:
     return "#" + "".join([f"{v:x}".ljust(2, "0") for v in rgb_value])
 
 
+def swatch(hex_value: str) -> str:
+    rgb = hex_to_rgb(hex_value)
+    channels = ";".join(str(c) for c in rgb)
+    symbol = " " * 3
+    return f"\033[48;2;{channels}m{symbol}\033[0m"
+
+
 @dataclass
 class Gradient:
 
