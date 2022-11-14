@@ -33,8 +33,17 @@ class Gradient:
 
     def __post_init__(self) -> None:
         grad = colorir.Grad(colors=self.colours)
-        self.__values: list[str] = grad.n_colors(self.steps)
+
+        self.__values: list[str] = (
+            grad.colors if self.steps is None else grad.n_colors(self.steps)
+        )
 
     @property
     def values(self) -> list[str]:
         return self.__values
+
+    def __str__(self):
+        return f"{self.__class__.__name__}({self.colours})"
+
+    def __repr__(self) -> str:
+        return "".join(repr(v) for v in self.values)
