@@ -13,6 +13,7 @@ packages = [{ include = "govdash" }]
 [tool.poetry.dependencies]
 python = "^3.8"
 dash = "^2.6.2"
+colorir = "^1.3.14"
 
 
 [tool.poetry.group.dev.dependencies]
