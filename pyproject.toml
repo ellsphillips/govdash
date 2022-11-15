@@ -14,6 +14,7 @@ packages = [{ include = "govdash" }]
 python = "^3.8"
 dash = "^2.6.2"
 plotly = "^5.11.0"
+colorir = "^1.3.14"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -3,6 +3,8 @@
 .idea/
 .DS_Store
 
+app
+data
 typings
 playground
 data
